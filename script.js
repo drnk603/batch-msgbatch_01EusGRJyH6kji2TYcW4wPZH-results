@@ -300,11 +300,11 @@
         message: 'Lūdzu, ievadiet derīgu uzvārdu (2-50 rakstzīmes)'
       },
       email: {
-        pattern: /^[^s@]+@[^s@]+.[^s@]+$/,
+        pattern: /^[^\s@]+@[^\s@]+.[^\s@]+$/,
         message: 'Lūdzu, ievadiet derīgu e-pasta adresi'
       },
       phone: {
-        pattern: /^[+-ds()]{7,20}$/,
+        pattern: /^[+\-ds()]{7,20}$/,
         message: 'Lūdzu, ievadiet derīgu tālruņa numuru'
       },
       subject: {
@@ -603,40 +603,3 @@
   }
 
 })();
-**Дополнительные CSS стили для scroll-to-top кнопки (добавить в style.css):**
-
-.scroll-to-top {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  width: 48px;
-  height: 48px;
-  background-color: var(--color-accent);
-  color: var(--color-white);
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: var(--shadow-lg);
-  z-index: 998;
-  transition: all var(--transition-base);
-}
-
-.scroll-to-top:hover,
-.scroll-to-top:focus {
-  background-color: var(--color-accent-hover);
-  transform: translateY(-4px);
-  box-shadow: 0 6px 16px rgba(196, 181, 216, 0.4);
-}
-
-.scroll-to-top:focus-visible {
-  outline: 2px solid var(--color-accent);
-  outline-offset: 2px;
-}
-
-.u-no-scroll {
-  overflow: hidden;
-}
